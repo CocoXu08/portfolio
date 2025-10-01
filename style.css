@@ -1,0 +1,20 @@
+body {
+  /* Set line height to 1.5 times the font size
+	   and use the OS’s UI font as the website font
+	 */
+  font: 100%/1.5 system-ui;
+}
+
+.row {
+  display: flex;                 /* 横向排列 */
+  justify-content: space-between; /* 两边对齐 */
+  align-items: baseline;          /* 保持基线对齐 */
+}
+
+.where {
+  font-weight: 600;              /* 学校名字更突出 */
+}
+
+.meta time {
+  white-space: nowrap;           /* 防止日期换行 */
+}
