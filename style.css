@@ -1,8 +1,40 @@
+:root{
+  --color-accent: oklch(75% 0.1 240);
+  accent-color: var(--color-accent);
+}
+
+nav{
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: oklch(80% 3% 200)
+}
+nav a{
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200); 
+  padding-bottom: 0.1em; 
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  background-color: oklch(from var(--color-accent) 95% 5% h)
+}
+
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 20px;
+  font-family: system-ui;
 }
 
 .row {
@@ -11,9 +43,131 @@ body {
   align-items: baseline;          
 }
 
-.where {
-  font-weight: 600;            
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
 }
 
-.meta time {
-  white-space: nowrap;        
+label{
+  display: contents;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+button{
+  grid-column: 1 / -1;
+}
+
+.projects{
+  display: grid;
+  grid-template-columns:repeat(auto-fill, minmax(15em, 1fr))
+}
+
+.projects article{
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em
+}
+
+article > h2 {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+
+/* Resume Page */
+header {
+  text-align: center;     
+}
+
+header h1 {
+  margin: 1rem; 
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  margin: 0;
+  justify-content: center;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.contact a {
+  color: oklch(28% 0.0078 197);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: oklch(65% 50% 0);
+  text-decoration: underline;
+}
+
+.resume-page {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+.where {
+  font-weight: bold;   
+  font-size: 1.3rem;         
+}
+
+.duration time {
+  white-space: nowrap;          
+}
+
+.duration{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.resume-page .title {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.resume-page .location {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.resume-page section {
+  border-top: 1.5px solid black;
+  padding-top: 0 rem;
+  margin-top: 1rem;
+}
+
+.resume-page h2 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/* input,
+textarea,
+button {
+  font: inherit;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label{
+  display: block;
+  margin-block: 20px;
+} */
+
