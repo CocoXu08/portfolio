@@ -6,15 +6,14 @@ body {
 }
 
 .row {
-  display: flex;                 /* 横向排列 */
-  justify-content: space-between; /* 两边对齐 */
-  align-items: baseline;          /* 保持基线对齐 */
+  display: flex;                
+  justify-content: space-between; 
+  align-items: baseline;          
 }
 
 .where {
-  font-weight: 600;              /* 学校名字更突出 */
+  font-weight: 600;            
 }
 
 .meta time {
-  white-space: nowrap;           /* 防止日期换行 */
-}
+  white-space: nowrap;        
