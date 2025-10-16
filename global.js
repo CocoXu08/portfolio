@@ -46,7 +46,60 @@ if (document.readyState === "loading") {
   markCurrentNav();
 }
 
+const PAGES = [
+  { url: "",            title: "Home" },
+  { url: "projects/",   title: "Projects" },
+  { url: "contact/",    title: "Contact" },
+  { url: "resume/",     title: "Resume" },
+  { url: "https://github.com/CocoXu08", title: "GitHub" },
+];
 
+function normalizePath(pathname) {
+  let p = pathname || "/";
+  try { p = new URL(p, location.origin).pathname; } catch {}
+  p = p.replace(/index\.html$/i, "");
+  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+  return p || "/";
+}
+
+function computeBasePath() {
+  const host = location.hostname;
+  const path = location.pathname;
+  if (host === "localhost" || host === "127.0.0.1") return "/";
+  if (host.endsWith(".github.io")) {
+    const parts = path.split("/").filter(Boolean);
+    return parts.length ? `/${parts[0]}/` : "/";
+  }
+  const seg = path.split("/").filter(Boolean)[0];
+  return seg ? `/${seg}/` : "/";
+}
+const BASE_PATH = computeBasePath();
+
+function buildNav() {
+  const nav = document.createElement("nav");
+  document.body.prepend(nav);
+
+  const here = normalizePath(location.pathname);
+
+  for (const p of PAGES) {
+    const isExternal = /^https?:\/\//i.test(p.url);
+    const url = isExternal ? p.url : (BASE_PATH + p.url);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.textContent = p.title;
+    if (isExternal) a.target = "_blank";
+
+    try {
+      const u = new URL(a.href, location.origin);
+      a.classList.toggle("current",
+        u.host === location.host && normalizePath(u.pathname) === here
+      );
+    } catch {}
+
+    nav.append(a);
+  }
+}
 
 // button
 const STORAGE_KEY = "colorScheme";
