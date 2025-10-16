@@ -10,7 +10,45 @@ const navLinks = $$("nav a");
 
 
 
-// global.js
+// Helper
+const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+// Normalize paths so "/", "/index.html", "/projects/", and "/projects/index.html" match correctly.
+function normalizePath(pathname) {
+  let p = pathname || "/";
+  // Ensure it's an absolute-URL pathname
+  try {
+    p = new URL(p, location.origin).pathname;
+  } catch {}
+  // Strip index.html and trailing slash (except root)
+  p = p.replace(/index\.html$/i, "");
+  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+  return p || "/";
+}
+
+function markCurrentNav() {
+  const navLinks = $$("nav a");
+  const here = normalizePath(location.pathname);
+
+  const currentLink = navLinks.find(a => {
+    const sameHost = a.host === location.host;
+    const samePath = normalizePath(a.pathname) === here;
+    return sameHost && samePath;
+  });
+
+  currentLink?.classList.add("current");
+}
+
+// Run after DOM is ready (reuse your existing ready guard if you have one)
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", markCurrentNav);
+} else {
+  markCurrentNav();
+}
+
+
+
+// button
 const STORAGE_KEY = "colorScheme";
 const AUTO_VALUE  = "light dark";
 const LIGHT_VALUE = "light";
@@ -63,3 +101,6 @@ if (document.readyState === "loading") {
 } else {
   insertThemeSwitch();
 }
+
+
+
