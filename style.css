@@ -6,9 +6,9 @@
 nav{
   display: flex;
   margin-bottom: 10px;
-  border-bottom-width: 1px;
+  /* border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200)
+  border-bottom-color: oklch(80% 3% 200) */
 }
 nav a{
   flex: 1;
@@ -26,7 +26,7 @@ nav a.current {
 
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h)
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 body {
@@ -157,17 +157,54 @@ header h1 {
   margin-bottom: 0.3rem;
 }
 
-/* input,
-textarea,
-button {
-  font: inherit;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
+html {
+  color-scheme: light dark;
+  background-color: Canvas;
+  color: CanvasText;
 }
 
-label{
-  display: block;
-  margin-block: 20px;
-} */
+
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  border-bottom: 1px solid var(--border-color);
+  /* your other nav styles */
+}
+
+
+/* switch */
+/* Make the page the containing block for the absolute switcher */
+body { position: relative; }
+
+/* Top-right theme switcher */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+
+  font-size: 80%;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+
+  padding: .45rem .6rem;
+  border: 1px solid var(--border-color, oklch(50% 10% 200 / 40%));
+  border-radius: .75rem;
+
+  background: Canvas;
+  color: CanvasText;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+/* Ensure form controls inherit the site font */
+select, input, textarea, button { font: inherit; }
+
+.color-scheme select {
+  background: Canvas;
+  color: CanvasText;
+  border: 1px solid var(--border-color, oklch(50% 10% 200 / 40%));
+  border-radius: .5rem;
+  padding: .2rem .45rem;
+}
+
 
