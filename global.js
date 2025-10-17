@@ -54,7 +54,7 @@ const LIGHT = "light";
 const DARK  = "dark";
 
 document.body.insertAdjacentHTML(
-  "beforeend",
+  "afterbegin",
   `<label class="color-scheme" aria-label="Theme selector">
      Theme:
      <select id="theme">
