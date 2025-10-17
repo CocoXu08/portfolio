@@ -49,7 +49,51 @@ for (let p of pages) {
 }
 
 
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="${AUTO_VALUE}">${autoLabel}</option>
+      <option value="${LIGHT_VALUE}">Light</option>
+      <option value="${DARK_VALUE}">Dark</option>
+		</select>
+	</label>`,
+);
 
+select.addEventListener('input', function (event) {
+  console.log('color scheme changed to', event.target.value);
+});
+
+document.documentElement.style.setProperty('color-scheme', event.target.value);
+
+const select = document.querySelector('#theme');
+
+// 1️⃣ When the user changes the theme
+select.addEventListener('input', (event) => {
+  const newScheme = event.target.value;
+
+  // Log to confirm
+  console.log('color scheme changed to', newScheme);
+
+  // Apply the color scheme
+  document.documentElement.style.setProperty('color-scheme', newScheme);
+
+  // Save the preference in localStorage
+  localStorage.colorScheme = newScheme;
+});
+
+// 2️⃣ When the page loads — restore user's previous choice
+if ('colorScheme' in localStorage) {
+  const savedScheme = localStorage.colorScheme;
+
+  // Apply it immediately
+  document.documentElement.style.setProperty('color-scheme', savedScheme);
+
+  // Update the dropdown so it matches the saved choice
+  select.value = savedScheme;
+}
 
 // button
 // const STORAGE_KEY = "colorScheme";
