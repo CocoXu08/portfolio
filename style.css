@@ -178,7 +178,7 @@ body { position: relative; }
 /* Top-right theme switcher */
 .color-scheme {
   position: absolute;
-  top: 1rem;
+  top: 3.5rem;
   right: 1rem;
   z-index: 1000;
 
