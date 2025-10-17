@@ -5,10 +5,10 @@
 
 nav{
   display: flex;
+  margin-top: 10px;
   margin-bottom: 10px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  /* border-bottom-color: oklch(80% 3% 200) */
   border-bottom-color: var(--border-color);
 }
 nav a{
