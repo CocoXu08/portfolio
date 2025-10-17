@@ -49,7 +49,7 @@ for (let p of pages) {
 }
 
 const STORAGE_KEY = "colorScheme";
-const AUTO  = "light dark"; // follow the spec
+const AUTO  = "light dark";
 const LIGHT = "light";
 const DARK  = "dark";
 
@@ -64,10 +64,17 @@ document.body.insertAdjacentHTML(
      </select>
    </label>`
 );
-const select = document.querySelector('#theme');
-select.addEventListener('input', function (event) {
-  console.log('color scheme changed to', event.target.value);
-  document.documentElement.style.setProperty('color-scheme', event.target.value);
+const select = document.querySelector(".color-scheme select");
+
+function setColorScheme(scheme) {
+document.documentElement.style.setProperty("color-scheme", scheme);
+}
+
+
+select.addEventListener("input", (event) => {
+const scheme = event.target.value;
+setColorScheme(scheme);
+localStorage.colorScheme = scheme;
 });
 
 
