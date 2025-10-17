@@ -5,6 +5,7 @@
 
 nav{
   display: flex;
+  margin-top: 3rem; 
   margin-bottom: 10px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
