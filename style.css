@@ -178,22 +178,22 @@ body { position: relative; }
 /* Top-right theme switcher */
 .color-scheme {
   position: absolute;
-  top: 3.5rem;
-  right: 0rem;
+  top: 5rem;
+  right: 1rem;
   z-index: 1000;
 
-  font-size: 80%;
+  font-size: 70%;
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
+  gap: .25rem;
 
-  padding: .45rem .6rem;
+  padding: .3rem .45rem;
   border: 1px solid var(--border-color, oklch(50% 10% 200 / 40%));
-  border-radius: .75rem;
+  border-radius: .5rem;
 
   background: Canvas;
   color: CanvasText;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
 }
 
 /* Ensure form controls inherit the site font */
@@ -203,8 +203,9 @@ select, input, textarea, button { font: inherit; }
   background: Canvas;
   color: CanvasText;
   border: 1px solid var(--border-color, oklch(50% 10% 200 / 40%));
-  border-radius: .5rem;
-  padding: .2rem .45rem;
+  border-radius: .3rem;
+  padding: .1rem .3rem;
+  font-size: 0.8em; 
 }
 
 
