@@ -4,102 +4,106 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-const navLinks = $$("nav a");
+// const navLinks = $$("nav a");
 
+let navLinks = $$("nav a");
 
+let currentLink = navLinks.find(
+  (a) => a.host === location.host && a.pathname === location.pathname
+);
 
+currentLink?.classList.add("current");
 
+// // Helper
+// const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-// Helper
-const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+// // Normalize paths so "/", "/index.html", "/projects/", and "/projects/index.html" match correctly.
+// function normalizePath(pathname) {
+//   let p = pathname || "/";
+//   // Ensure it's an absolute-URL pathname
+//   try {
+//     p = new URL(p, location.origin).pathname;
+//   } catch {}
+//   // Strip index.html and trailing slash (except root)
+//   p = p.replace(/index\.html$/i, "");
+//   if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+//   return p || "/";
+// }
 
-// Normalize paths so "/", "/index.html", "/projects/", and "/projects/index.html" match correctly.
-function normalizePath(pathname) {
-  let p = pathname || "/";
-  // Ensure it's an absolute-URL pathname
-  try {
-    p = new URL(p, location.origin).pathname;
-  } catch {}
-  // Strip index.html and trailing slash (except root)
-  p = p.replace(/index\.html$/i, "");
-  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
-  return p || "/";
-}
+// function markCurrentNav() {
+//   const navLinks = $$("nav a");
+//   const here = normalizePath(location.pathname);
 
-function markCurrentNav() {
-  const navLinks = $$("nav a");
-  const here = normalizePath(location.pathname);
+//   const currentLink = navLinks.find(a => {
+//     const sameHost = a.host === location.host;
+//     const samePath = normalizePath(a.pathname) === here;
+//     return sameHost && samePath;
+//   });
 
-  const currentLink = navLinks.find(a => {
-    const sameHost = a.host === location.host;
-    const samePath = normalizePath(a.pathname) === here;
-    return sameHost && samePath;
-  });
+//   currentLink?.classList.add("current");
+// }
 
-  currentLink?.classList.add("current");
-}
+// // Run after DOM is ready (reuse your existing ready guard if you have one)
+// if (document.readyState === "loading") {
+//   document.addEventListener("DOMContentLoaded", markCurrentNav);
+// } else {
+//   markCurrentNav();
+// }
 
-// Run after DOM is ready (reuse your existing ready guard if you have one)
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", markCurrentNav);
-} else {
-  markCurrentNav();
-}
+// const PAGES = [
+//   { url: "",            title: "Home" },
+//   { url: "projects/",   title: "Projects" },
+//   { url: "contact/",    title: "Contact" },
+//   { url: "resume/",     title: "Resume" },
+//   { url: "https://github.com/CocoXu08", title: "GitHub" },
+// ];
 
-const PAGES = [
-  { url: "",            title: "Home" },
-  { url: "projects/",   title: "Projects" },
-  { url: "contact/",    title: "Contact" },
-  { url: "resume/",     title: "Resume" },
-  { url: "https://github.com/CocoXu08", title: "GitHub" },
-];
+// function normalizePath(pathname) {
+//   let p = pathname || "/";
+//   try { p = new URL(p, location.origin).pathname; } catch {}
+//   p = p.replace(/index\.html$/i, "");
+//   if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+//   return p || "/";
+// }
 
-function normalizePath(pathname) {
-  let p = pathname || "/";
-  try { p = new URL(p, location.origin).pathname; } catch {}
-  p = p.replace(/index\.html$/i, "");
-  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
-  return p || "/";
-}
+// function computeBasePath() {
+//   const host = location.hostname;
+//   const path = location.pathname;
+//   if (host === "localhost" || host === "127.0.0.1") return "/";
+//   if (host.endsWith(".github.io")) {
+//     const parts = path.split("/").filter(Boolean);
+//     return parts.length ? `/${parts[0]}/` : "/";
+//   }
+//   const seg = path.split("/").filter(Boolean)[0];
+//   return seg ? `/${seg}/` : "/";
+// }
+// const BASE_PATH = computeBasePath();
 
-function computeBasePath() {
-  const host = location.hostname;
-  const path = location.pathname;
-  if (host === "localhost" || host === "127.0.0.1") return "/";
-  if (host.endsWith(".github.io")) {
-    const parts = path.split("/").filter(Boolean);
-    return parts.length ? `/${parts[0]}/` : "/";
-  }
-  const seg = path.split("/").filter(Boolean)[0];
-  return seg ? `/${seg}/` : "/";
-}
-const BASE_PATH = computeBasePath();
+// function buildNav() {
+//   const nav = document.createElement("nav");
+//   document.body.prepend(nav);
 
-function buildNav() {
-  const nav = document.createElement("nav");
-  document.body.prepend(nav);
+//   const here = normalizePath(location.pathname);
 
-  const here = normalizePath(location.pathname);
+//   for (const p of PAGES) {
+//     const isExternal = /^https?:\/\//i.test(p.url);
+//     const url = isExternal ? p.url : (BASE_PATH + p.url);
 
-  for (const p of PAGES) {
-    const isExternal = /^https?:\/\//i.test(p.url);
-    const url = isExternal ? p.url : (BASE_PATH + p.url);
+//     const a = document.createElement("a");
+//     a.href = url;
+//     a.textContent = p.title;
+//     if (isExternal) a.target = "_blank";
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.textContent = p.title;
-    if (isExternal) a.target = "_blank";
+//     try {
+//       const u = new URL(a.href, location.origin);
+//       a.classList.toggle("current",
+//         u.host === location.host && normalizePath(u.pathname) === here
+//       );
+//     } catch {}
 
-    try {
-      const u = new URL(a.href, location.origin);
-      a.classList.toggle("current",
-        u.host === location.host && normalizePath(u.pathname) === here
-      );
-    } catch {}
-
-    nav.append(a);
-  }
-}
+//     nav.append(a);
+//   }
+// }
 
 // button
 const STORAGE_KEY = "colorScheme";
