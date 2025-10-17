@@ -34,7 +34,7 @@ body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: auto;
-  padding: 20px;
+  padding: 80px 20px 20px;
   font-family: system-ui;
 }
 
@@ -172,6 +172,8 @@ nav {
 
 
 /* Top-right theme switcher */
+
+
 .color-scheme {
   position: absolute;
   top: 10rem;
