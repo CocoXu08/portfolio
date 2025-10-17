@@ -8,7 +8,8 @@ nav{
   margin-bottom: 10px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200)
+  /* border-bottom-color: oklch(80% 3% 200) */
+  border-bottom-color: var(--border-color);
 }
 nav a{
   flex: 1;
@@ -167,7 +168,6 @@ html {
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   border-bottom: 1px solid var(--border-color);
-  /* your other nav styles */
 }
 
 
