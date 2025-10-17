@@ -71,6 +71,12 @@ select.addEventListener('input', function (event) {
 });
 
 
+if ("colorScheme" in localStorage) {
+    const saved = localStorage.colorScheme;
+    setColorScheme(saved);
+    select.value = saved;
+  }
+
 
 
 
