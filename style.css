@@ -6,9 +6,9 @@
 nav{
   display: flex;
   margin-bottom: 10px;
-  /* border-bottom-width: 1px;
+  border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200) */
+  border-bottom-color: oklch(80% 3% 200)
 }
 nav a{
   flex: 1;
