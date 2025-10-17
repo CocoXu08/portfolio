@@ -48,6 +48,28 @@ for (let p of pages) {
   nav.append(a);
 }
 
+const STORAGE_KEY = "colorScheme";
+const AUTO  = "light dark"; // follow the spec
+const LIGHT = "light";
+const DARK  = "dark";
+
+document.body.insertAdjacentHTML(
+  "afterbegin",
+  `<label class="color-scheme" aria-label="Theme selector">
+     Theme:
+     <select id="theme">
+       <option value="${AUTO}">Automatic</option>
+       <option value="${LIGHT}">Light</option>
+       <option value="${DARK}">Dark</option>
+     </select>
+   </label>`
+);
+
+select.addEventListener('input', function (event) {
+  console.log('color scheme changed to', event.target.value);
+  document.documentElement.style.setProperty('color-scheme', event.target.value);
+});
+
 
 
 
