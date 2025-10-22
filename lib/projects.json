@@ -19,7 +19,7 @@
     },
     {
         "title": "Analyzing the Key Factors in College Admissions Decisions",
-        "year": "2023",
+        "year": "2022",
         "image": "../lib/Images/factors_influencing_college_admission_decisions.png",
         "description": "This project explores which factors—GPA, SAT scores, or extracurricular activities—most influence college admission outcomes. Using a Kaggle dataset of 250 students, we analyzed how these variables relate to acceptance, rejection, or waitlist status. Through data cleaning, visualization, and statistical modeling (ANOVA and one-hot encoded linear regression), we found that extracurricular activities show the strongest correlation with acceptance, followed by GPA and SAT scores. The study highlights how non-academic involvement may better reflect student potential than standardized metrics alone, while also discussing ethical issues like bias, fairness, and data privacy in educational data analysis."},
     {
@@ -31,43 +31,44 @@
     {
         "title": "Addressing Food Insecurity in Yemen — SDG 2: Zero Hunger",
         "year": "2019",
-        "image": "lib/Images/food_insecurity_in_Yemen.png",
+        "image": "../lib/Images/food_insecurity_in_Yemen.png",
         "description": "This project explores the famine crisis in Yemen under the UN’s Zero Hunger goal, focusing on how conflict, inflation, and economic collapse have driven severe food shortages. Drawing on reports from the UN, USAID, and CARE, it highlights humanitarian efforts and the urgent need for sustainable food aid and peacebuilding to combat hunger."
     },
     {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
+        "title": "Investment Strategy and Financial Planning Report",
+        "year": "2020",
+        "image": "../lib/Images/investment_strategy.png",
+        "description": "This report outlines a long-term investment and wealth management strategy designed to meet Ms. Jordan’s goals of maintaining annual free cash flow for scholarships and building generational wealth. The portfolio integrates fundamental growth stocks, high-dividend blue chips, REITs, gold, and disruptive innovation sectors to balance stability, income, and capital appreciation while mitigating inflation and market risks."
     },
     {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
+        "title": "Cultural Life in the Victorian Era",
+        "year": "2022",
+        "image": "../lib/Images/victorian_era.png",
+        "description": "This presentation explores the social, artistic, and architectural culture of the Victorian Era. It highlights the contrast between men’s and women’s roles, the rise of lavish architectural styles like Gothic Revival and Italianate, the growth of realist and orientalist art, and the expansion of education and religion during Britain’s industrial and imperial age."
     },
     {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
+        "title": "Bridging the Divide: Cultivating Educational Equity",
+        "year": "2023",
+        "image": "../lib/Images/bridging_the_divide.png",
+        "description": "This analytical essay explores how socioeconomic inequality shapes access to education in the United States. It examines the effects of financial barriers, early childhood disparities, and unequal school resources, arguing that true equity requires systemic reform and community investment. The project emphasizes that achieving educational equality is essential to building a fair and inclusive society."
+    },
+    
+    {
+        "title": "What Drives Cancer Severity?",
+        "year": "2023",
+        "image": "../lib/Images/cancer_severity.png",
+        "description": "This project analyzed lifestyle and environmental factors—smoking, alcohol use, air pollution, and obesity—and their relationship to cancer severity scores in U.S. patients from 2015–2024. Using correlation and regression analysis, we found that smoking showed the strongest and most consistent positive association with cancer severity, followed by air pollution, while alcohol use and obesity had weaker effects. The study highlights how modifiable risk factors contribute to disease outcomes and underscores the value of preventive health strategies."
     },
     {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
+        "title": "Life of Pi: The Bond Between Man and Tiger",
+        "year": "2021",
+        "image": "../lib/Images/life_of_pi.png",
+        "description": "This literary analysis examines the mutual dependence between Pi and Richard Parker in Life of Pi. It argues that their relationship is symbiotic, as each provides the other with strength and hope needed for survival during their 227 days at sea. The essay highlights how companionship becomes essential to endurance and faith in isolation."
     },
     {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
-    },
-    {
-        "title": "",
-        "year": "",
-        "image": "",
-        "description": ""
+        "title": "Exploring Techniques and Color in Drawing",
+        "year": "2018",
+        "image": "../lib/Images/drawing.png",
+        "description": "This project focuses on experimenting with different drawing techniques and color applications to develop artistic expression and visual balance. By exploring shading, layering, perspective, and color blending, I learned how various tools and palettes can create different moods and textures. The project emphasizes creativity through practice, showing how technique and color choice work together to bring ideas to life."
     }
 ]
