@@ -2,71 +2,72 @@
     {
         "title": "Processed Foods Offer the Cheapest Calories",
         "year": "2025",
-        "image": "lib/Images/price_per_calorie_by_processing.png",
-        "description": "This boxplot shows that ultra-processed foods have the lowest price per calorie, using data from the Grocery Store Foods dataset. As processing increases, calories become cheaper—highlighting how affordability often comes at the cost of nutritional quality."
+        "image": "../lib/Images/price_per_calorie_by_processing.png",
+        "description": "Created a boxplot visualization using the Grocery Store Foods dataset to examine how food processing relates to affordability. The analysis shows that ultra-processed foods provide the cheapest calories, revealing how economic accessibility often comes at the cost of nutritional quality."
     },
     {
         "title": "Hourly and Seasonal Trends in Marginal Cost of Energy",
         "year": "2024",
-        "image": "lib/Images/avg_hourly_MCE_by_month_heat_map.png",
-        "description": "This presents a heatmap of average Marginal Cost of Energy (MCE) by hour of the day and month, using data from 2012 through 2024. This visualization highlights both systematic intra-day pricing patterns and their seasonal amplification."},
-    {
-        "title": "Qini Curve for Treatment Effect Evaluation",
-        "year": "2025",
-        "image": "lib/Images/treatment_effect_qini_curve.png",
-        "description": "This line chart displays a Qini curve, used to evaluate how well a model identifies individuals who benefit most from a treatment. The x-axis shows the proportion of the population, and the y-axis shows cumulative gain—higher curves indicate stronger model performance in treatment effect estimation."},
-    {
-        "title": "Quae totam similique non!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nam animi magnam reiciendis commodi nisi, pariatur iure atque quia sed cupiditate deserunt totam voluptatum asperiores dolores officiis dicta explicabo eveniet nulla repudiandae ducimus eum eius iusto provident blanditiis. Obcaecati."
+        "image": "../lib/Images/avg_hourly_MCE_by_month_heat_map.png",
+        "description": "This project analyzes historical Marginal Cost of Energy (MCE) data from 2012–2024 to uncover temporal pricing patterns. The heatmap visualizes average MCE by hour of the day and month, revealing clear daily cycles and stronger seasonal fluctuations. These insights support energy market forecasting and highlight how demand and supply dynamics shift throughout the year."
     },
     {
-        "title": "Illum non pariatur explicabo?",
+        "title": "Evaluating Treatment Effectiveness with Qini Curves",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Modi quia ducimus inventore praesentium iure! Debitis beatae, neque, molestias eum quas quis nostrum officia accusantium laboriosam sequi autem nesciunt, itaque sit ullam illum repudiandae? Magnam repellat unde error dolorem!"
+        "image": "../lib/Images/treatment_effect_qini_curve.png",
+        "description": "This project analyzes health data comparing individuals who received a treatment versus those who did not. Using a model trained for treatment effect estimation, we visualized its performance with a Qini curve, which measures how well the model identifies patients most likely to benefit. The curve highlights cumulative gains in outcomes, showing how predictive modeling can support more effective and targeted healthcare interventions."
     },
     {
-        "title": "Deleniti molestiae possimus eligendi!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eaque repellat quos soluta, itaque quo sunt pariatur amet aliquam placeat, laboriosam vitae dolore nostrum distinctio ducimus animi quod autem odit sapiente cum atque molestiae explicabo. Accusamus inventore earum incidunt?"
+        "title": "Analyzing the Key Factors in College Admissions Decisions",
+        "year": "2023",
+        "image": "../lib/Images/factors_influencing_college_admission_decisions.png",
+        "description": "This project explores which factors—GPA, SAT scores, or extracurricular activities—most influence college admission outcomes. Using a Kaggle dataset of 250 students, we analyzed how these variables relate to acceptance, rejection, or waitlist status. Through data cleaning, visualization, and statistical modeling (ANOVA and one-hot encoded linear regression), we found that extracurricular activities show the strongest correlation with acceptance, followed by GPA and SAT scores. The study highlights how non-academic involvement may better reflect student potential than standardized metrics alone, while also discussing ethical issues like bias, fairness, and data privacy in educational data analysis."},
+    {
+        "title": "Predicting Power Outage Severity in the U.S.",
+        "year": "2023",
+        "image": "../lib/Images/predicting_power_outage_severity_in_U.S..png",
+        "description": "Analyzed nationwide outage data to identify factors driving severe power losses. Using weather, population, and economic indicators, we built regression models to predict outage severity. Results show that extreme weather and high population density are key predictors, offering insights for improving energy resilience."
     },
     {
-        "title": "Enim voluptate aliquam voluptatibus?",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Doloremque perferendis pariatur mollitia tenetur cumque! Optio saepe dignissimos beatae repudiandae dolores ut, sint facere harum corrupti corporis, distinctio quam at delectus nam, voluptatibus ea! Id eaque tenetur possimus aperiam."
+        "title": "Addressing Food Insecurity in Yemen — SDG 2: Zero Hunger",
+        "year": "2022",
+        "image": "lib/Images/food_insecurity_in_Yemen.png",
+        "description": "This project explores the famine crisis in Yemen under the UN’s Zero Hunger goal, focusing on how conflict, inflation, and economic collapse have driven severe food shortages. Drawing on reports from the UN, USAID, and CARE, it highlights humanitarian efforts and the urgent need for sustainable food aid and peacebuilding to combat hunger."
     },
     {
-        "title": "Mollitia, dolorum. Praesentium, ullam!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Vitae, voluptate rerum! Laudantium iure qui nisi vel quisquam, odio quis asperiores incidunt consequatur. Tempora dolorem deleniti magni aspernatur, sit ullam necessitatibus doloribus vero, adipisci sed error ipsa totam minus!"
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
     },
     {
-        "title": "Aspernatur porro cupiditate facilis!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Maxime eveniet, amet aliquid, distinctio unde adipisci id ea nobis quod fuga esse, impedit accusantium. Ipsam assumenda voluptates, itaque, tempore quia sint corrupti recusandae ab nisi culpa non, enim esse."
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
     },
     {
-        "title": "Architecto debitis impedit corporis.",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nihil placeat voluptas dolores corrupti vel. Error repellendus optio consequuntur commodi nihil omnis, vero cupiditate quae minima aperiam? Saepe omnis similique nemo laboriosam! Corrupti vero nihil culpa laborum adipisci ea."
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
     },
     {
-        "title": "Nostrum nemo reprehenderit totam!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Veritatis, nihil perferendis praesentium ipsa impedit minus, provident ad numquam doloribus illum aperiam atque animi. Voluptates tempora voluptate odio fuga sint culpa explicabo eum, pariatur tempore magni quo, repellat iusto."
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
     },
     {
-        "title": "Nihil autem aspernatur possimus!",
-        "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Necessitatibus aliquam voluptas officiis harum? Ipsa aliquid iste quidem distinctio mollitia culpa odio, deleniti quis sequi sed quasi maiores, ipsum molestias reiciendis perferendis debitis ex dignissimos consequatur est sunt cum?"
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
+    },
+    {
+        "title": "",
+        "year": "",
+        "image": "",
+        "description": ""
     }
 ]
