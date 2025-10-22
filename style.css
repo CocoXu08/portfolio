@@ -206,3 +206,51 @@ select, input, textarea, button { font: inherit; }
 }
 
 
+
+
+/* lab 3
+/* --- GitHub stats card --- */
+#profile-stats {
+  max-width: 900px;
+  margin: 1rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04); /* subtle card on dark */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+#profile-stats h2 {
+  margin: 0 0 0.75rem;
+}
+
+/* Grid the <dl>: 4 equal columns, labels on row 1, numbers on row 2 */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem 1.25rem;      /* row / column gap */
+  align-items: end;
+  margin: 0;
+}
+
+#profile-stats dt {
+  grid-row: 1;               /* all labels on the first row */
+  font-weight: 600;
+  opacity: 0.85;
+  text-align: center;
+}
+
+#profile-stats dd {
+  grid-row: 2;               /* all values on the second row */
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw + .3rem, 2rem); /* bigger numbers */
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 700px) {
+  #profile-stats dl {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.5rem;
+  }
+}
