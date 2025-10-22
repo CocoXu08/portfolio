@@ -169,6 +169,35 @@ nav {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Projects layout: 3 per row */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;          /* space between cards */
+  justify-items: center; /* center each article */
+  margin-top: 1rem;
+}
+
+/* Individual project cards */
+.projects article {
+  background: rgba(255, 255, 255, 0.05); /* subtle card background */
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Images inside each project */
+.projects img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+
 
 /* Top-right theme switcher */
 
@@ -210,47 +239,36 @@ select, input, textarea, button { font: inherit; }
 
 /* lab 3
 /* --- GitHub stats card --- */
-#profile-stats {
-  max-width: 900px;
-  margin: 1rem 0 2rem;
-  padding: 1rem 1.25rem;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.04); /* subtle card on dark */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-#profile-stats h2 {
-  margin: 0 0 0.75rem;
-}
-
-/* Grid the <dl>: 4 equal columns, labels on row 1, numbers on row 2 */
-#profile-stats dl {
+/* Project grid layout */
+.projects {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.25rem 1.25rem;      /* row / column gap */
-  align-items: end;
-  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: start; /* keeps the tops aligned */
+  margin-top: 1.5rem;
 }
 
-#profile-stats dt {
-  grid-row: 1;               /* all labels on the first row */
-  font-weight: 600;
-  opacity: 0.85;
+/* Project cards */
+.projects article {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 1rem;
+  max-width: 380px;
+  min-height: 600px;        /* ensures all cards are equal height */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-#profile-stats dd {
-  grid-row: 2;               /* all values on the second row */
-  margin: 0;
-  text-align: center;
-  font-weight: 700;
-  font-size: clamp(1.25rem, 2.2vw + .3rem, 2rem); /* bigger numbers */
-}
-
-/* Mobile: 2 columns */
-@media (max-width: 700px) {
-  #profile-stats dl {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 0.5rem;
-  }
+/* Image styling */
+.projects img {
+  width: 100%;
+  height: 220px;            /* fixes uneven image heights */
+  object-fit: contain;      /* scales without cropping */
+  margin-bottom: 1rem;
+  border-radius: 8px;
 }

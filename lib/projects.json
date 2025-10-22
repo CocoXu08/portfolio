@@ -2,61 +2,70 @@
     {
         "title": "Processed Foods Offer the Cheapest Calories",
         "year": "2025",
-        "image": "portfolio/lib/Images/price_per_calorie_by_processing.png",
+        "image": "lib/Images/price_per_calorie_by_processing.png",
         "description": "This boxplot shows that ultra-processed foods have the lowest price per calorie, using data from the Grocery Store Foods dataset. As processing increases, calories become cheaper—highlighting how affordability often comes at the cost of nutritional quality."
     },
     {
-        "title": "Molestias sunt illo hic!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Iste exercitationem eum nisi nemo, beatae porro cum sequi libero ab inventore quasi voluptatibus nostrum voluptas nam fugiat impedit dolore cupiditate expedita animi consequatur vitae corporis voluptatum! Quae, ullam incidunt."
-    },
+        "title": "Hourly and Seasonal Trends in Marginal Cost of Energy",
+        "year": "2024",
+        "image": "lib/Images/avg_hourly_MCE_by_month_heat_map.png",
+        "description": "This presents a heatmap of average Marginal Cost of Energy (MCE) by hour of the day and month, using data from 2012 through 2024. This visualization highlights both systematic intra-day pricing patterns and their seasonal amplification."},
     {
-        "title": "Incidunt voluptas aspernatur laudantium.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Doloremque minus repudiandae error praesentium eos. Ratione doloribus odit laboriosam perferendis illum est perspiciatis nesciunt voluptas praesentium quam consectetur soluta dolorem deserunt nobis inventore corporis quisquam quia, corrupti fugiat mollitia."
-    },
+        "title": "Qini Curve for Treatment Effect Evaluation",
+        "year": "2025",
+        "image": "lib/Images/treatment_effect_qini_curve.png",
+        "description": "This line chart displays a Qini curve, used to evaluate how well a model identifies individuals who benefit most from a treatment. The x-axis shows the proportion of the population, and the y-axis shows cumulative gain—higher curves indicate stronger model performance in treatment effect estimation."},
     {
         "title": "Quae totam similique non!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Nam animi magnam reiciendis commodi nisi, pariatur iure atque quia sed cupiditate deserunt totam voluptatum asperiores dolores officiis dicta explicabo eveniet nulla repudiandae ducimus eum eius iusto provident blanditiis. Obcaecati."
     },
     {
         "title": "Illum non pariatur explicabo?",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Modi quia ducimus inventore praesentium iure! Debitis beatae, neque, molestias eum quas quis nostrum officia accusantium laboriosam sequi autem nesciunt, itaque sit ullam illum repudiandae? Magnam repellat unde error dolorem!"
     },
     {
         "title": "Deleniti molestiae possimus eligendi!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Eaque repellat quos soluta, itaque quo sunt pariatur amet aliquam placeat, laboriosam vitae dolore nostrum distinctio ducimus animi quod autem odit sapiente cum atque molestiae explicabo. Accusamus inventore earum incidunt?"
     },
     {
         "title": "Enim voluptate aliquam voluptatibus?",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Doloremque perferendis pariatur mollitia tenetur cumque! Optio saepe dignissimos beatae repudiandae dolores ut, sint facere harum corrupti corporis, distinctio quam at delectus nam, voluptatibus ea! Id eaque tenetur possimus aperiam."
     },
     {
         "title": "Mollitia, dolorum. Praesentium, ullam!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Vitae, voluptate rerum! Laudantium iure qui nisi vel quisquam, odio quis asperiores incidunt consequatur. Tempora dolorem deleniti magni aspernatur, sit ullam necessitatibus doloribus vero, adipisci sed error ipsa totam minus!"
     },
     {
         "title": "Aspernatur porro cupiditate facilis!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Maxime eveniet, amet aliquid, distinctio unde adipisci id ea nobis quod fuga esse, impedit accusantium. Ipsam assumenda voluptates, itaque, tempore quia sint corrupti recusandae ab nisi culpa non, enim esse."
     },
     {
         "title": "Architecto debitis impedit corporis.",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Nihil placeat voluptas dolores corrupti vel. Error repellendus optio consequuntur commodi nihil omnis, vero cupiditate quae minima aperiam? Saepe omnis similique nemo laboriosam! Corrupti vero nihil culpa laborum adipisci ea."
     },
     {
         "title": "Nostrum nemo reprehenderit totam!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Veritatis, nihil perferendis praesentium ipsa impedit minus, provident ad numquam doloribus illum aperiam atque animi. Voluptates tempora voluptate odio fuga sint culpa explicabo eum, pariatur tempore magni quo, repellat iusto."
     },
     {
         "title": "Nihil autem aspernatur possimus!",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Necessitatibus aliquam voluptas officiis harum? Ipsa aliquid iste quidem distinctio mollitia culpa odio, deleniti quis sequi sed quasi maiores, ipsum molestias reiciendis perferendis debitis ex dignissimos consequatur est sunt cum?"
     }
