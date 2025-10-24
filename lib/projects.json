@@ -2,7 +2,7 @@
     {
         "title": "Processed Foods Offer the Cheapest Calories",
         "year": "2025",
-        "image": "../lib/Images/price_per_calorie_by_processing.png",
+        "image": "/lib/Images/price_per_calorie_by_processing.png",
         "description": "Created a boxplot visualization using the Grocery Store Foods dataset to examine how food processing relates to affordability. The analysis shows that ultra-processed foods provide the cheapest calories, revealing how economic accessibility often comes at the cost of nutritional quality."
     },
     {
