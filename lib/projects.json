@@ -2,19 +2,19 @@
     {
         "title": "Processed Foods Offer the Cheapest Calories",
         "year": "2025",
-        "image": "https://github.com/CocoXu08/portfolio/blob/main/lib/Images/avg_hourly_MCE_by_month_heat_map.png",
+        "image": "https://github.com/CocoXu08/portfolio/blob/main/lib/Images/price_per_calorie_by_processing.png?raw=true",
         "description": "Created a boxplot visualization using the Grocery Store Foods dataset to examine how food processing relates to affordability. The analysis shows that ultra-processed foods provide the cheapest calories, revealing how economic accessibility often comes at the cost of nutritional quality."
     },
     {
         "title": "Hourly and Seasonal Trends in Marginal Cost of Energy",
         "year": "2024",
-        "image": "../lib/Images/avg_hourly_MCE_by_month_heat_map.png",
+        "image": "https://github.com/CocoXu08/portfolio/blob/main/lib/Images/avg_hourly_MCE_by_month_heat_map.png?raw=true",
         "description": "This project analyzes historical Marginal Cost of Energy (MCE) data from 2012–2024 to uncover temporal pricing patterns. The heatmap visualizes average MCE by hour of the day and month, revealing clear daily cycles and stronger seasonal fluctuations. These insights support energy market forecasting and highlight how demand and supply dynamics shift throughout the year."
     },
     {
         "title": "Evaluating Treatment Effectiveness with Qini Curves",
         "year": "2025",
-        "image": "../lib/Images/treatment_effect_qini_curve.png",
+        "image": "https://github.com/CocoXu08/portfolio/blob/main/lib/Images/treatment_effect_qini_curve.png?raw=true",
         "description": "This project analyzes health data comparing individuals who received a treatment versus those who did not. Using a model trained for treatment effect estimation, we visualized its performance with a Qini curve, which measures how well the model identifies patients most likely to benefit. The curve highlights cumulative gains in outcomes, showing how predictive modeling can support more effective and targeted healthcare interventions."
     },
     {
