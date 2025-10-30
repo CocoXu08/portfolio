@@ -315,4 +315,73 @@ select, input, textarea, button { font: inherit; }
 }
 
 
-/* lab 5
+/* lab 5 */
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin-bottom: 3em;
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.legend {
+  flex: 1;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  margin-top: 1.5rem;      /* space above */
+}
+
+.searchBar {
+  width: 60%;
+  max-width: 600px;
+  min-width: 250px;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 2px solid #2f63c6;
+  background: #1f1f1f;
+  color: #eaeaea;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+
+.searchBar::placeholder {
+  color: #a0a0a0;
+}
+
+.searchBar:focus {
+  border-color: #6aa7ff;
+  box-shadow: 0 0 0 3px rgba(106,167,255,0.25);
+}
+
+#projects-plot path { cursor: pointer; transition: 300ms; }
+#projects-plot:has(path:hover) path:not(:hover) { opacity: 0.5; }
+
+.selected { --color: oklch(60% 45% 0) !important; }
+.selected:is(path) { fill: var(--color); }
