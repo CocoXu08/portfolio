@@ -1,7 +1,7 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 async function loadData() {
-  const data = await d3.csv('loc.csv', (row) => ({
+  const data = await d3.csv('./loc.csv', (row) => ({
     ...row,
     line: Number(row.line), // or just +row.line
     depth: Number(row.depth),
@@ -33,8 +33,6 @@ function processCommits(data) {
 
       Object.defineProperty(ret, 'lines', {
         value: lines,
-        // What other options do we need to set?
-        // Hint: look up configurable, writable, and enumerable
       });
 
       return ret;
@@ -173,21 +171,6 @@ function renderScatterPlot(data, commits) {
     return selected;
   }
 
-//   function renderLanguageBreakdown(selection) {
-//     const selected = selection ? commits.filter(d => isCommitSelected(selection, d)) : [];
-//     const container = document.getElementById('language-breakdown');
-//     if (!container) return;
-
-//     if (selected.length === 0) { container.innerHTML = ''; return; }
-//     const lines = selected.flatMap(d => d.lines);
-
-//     const breakdown = d3.rollup(lines, v => v.length, d => d.type);
-//     container.innerHTML = '';
-//     for (const [language, count] of breakdown) {
-//       const pct = d3.format('.1~%')(count / lines.length);
-//       container.innerHTML += `<dt>${language}</dt><dd>${count} lines (${pct})</dd>`;
-//     }
-//   }
   function renderLanguageBreakdown(selection) {
   const selectedCommits = selection
     ? commits.filter((d) => isCommitSelected(selection, d))
@@ -208,7 +191,6 @@ function renderScatterPlot(data, commits) {
     (d) => d.type,
   );
 
-  // Update DOM with breakdown
   container.innerHTML = '';
 
   for (const [language, count] of breakdown) {
@@ -229,7 +211,6 @@ function renderScatterPlot(data, commits) {
     renderLanguageBreakdown(selection);
   }
 
-  // attach brush AFTER dots, then raise dots above overlay for hover
   svg.call(d3.brush().on('start brush end', brushed));
   svg.selectAll('.dots, .overlay ~ *').raise();
 }
