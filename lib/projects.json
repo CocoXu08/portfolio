@@ -70,5 +70,11 @@
         "year": "2018",
         "image": "../lib/Images/drawing.png",
         "description": "This project focuses on experimenting with different drawing techniques and color applications to develop artistic expression and visual balance. By exploring shading, layering, perspective, and color blending, I learned how various tools and palettes can create different moods and textures. The project emphasizes creativity through practice, showing how technique and color choice work together to bring ideas to life."
+    },
+    {
+        "title": "Interactive Boston Bike Traffic Map",
+        "year": "2025",
+        "image": "../lib/Images/Bikewatching.png",
+        "description": "An interactive D3.js map that visualizes Boston’s bike traffic throughout the day. It shows bike lanes, BlueBike stations, and real ride data, with circle size and color reflecting traffic volume and flow direction. Users can pan, zoom, and filter by time using a slider."
     }
 ]
