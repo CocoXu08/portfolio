@@ -12,11 +12,31 @@
     <p>This page includes stats about the code of this website.</p>
 </main>
 
+<div style="display: flex; align-items: baseline;">
+  <label style="flex: 1;">
+    Show commits until:
+    <input
+      type="range"
+      id="commit-progress"
+      min="0"
+      max="100"
+      value="100"
+    />
+    <time id="commit-time"></time>
+  </label>
+</div>
+
+
+
 <div id="stats" class="card">
   <h2>Summary</h2>
 </div>
 
+
 <h1>Commits by time of day</h1>
+
+
+
 <div id="chart"></div>
 
 
