@@ -544,7 +544,7 @@ dl.info[hidden]:not(:hover, :focus-within){
   border-radius: 50%;
 }
 
-dd {
+#files dd {
   grid-column: 2;
   display: flex;
   flex-wrap: wrap;
