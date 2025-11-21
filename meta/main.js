@@ -466,8 +466,17 @@ d3.select('#scatter-story')
   );
 
 
-  function onStepEnter(response) {
-  console.log(response.element.__data__.datetime);
+function onStepEnter(response) {
+  let commit = response.element.__data__;
+  let date = commit.datetime;
+
+  // Now update the filtered commits
+  filteredCommits = commits.filter(d => d.datetime <= date);
+
+  // Update UI
+  updateScatterPlot(data, filteredCommits);
+  updateCommitInfo(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
 }
 
 const scroller = scrollama();
@@ -477,3 +486,4 @@ scroller
     step: '#scrolly-1 .step',
   })
   .onStepEnter(onStepEnter);
+
